@@ -1,5 +1,7 @@
 # kimmdy-examples
 
+![](./assets/kimmdy_logo.svg)
+
 A list of KIMMDY setups, runs, analysis scripts and figures to go along with the manuscript.
 
 - [Introduction]()
@@ -8,3 +10,4 @@ A list of KIMMDY setups, runs, analysis scripts and figures to go along with the
 - [KIMMDY can model competing reactions in biologically relevant systems](https://github.com/graeter-group/kimmdy-hydrolysis-examples)
 - [KIMMDY predicts quantum yields in DNA origami motifs]()
 
+- [assets](./assets/)
