@@ -1,0 +1,46 @@
+name: 'collagen_HAT'
+dryrun: false
+gmx_mdrun_flags: -maxh 24 -gpu_id 1
+ff: './amber99sb-star-ildnp-fix.ff' # optional, dir endinng with .ff by default 
+top: 'topol.top'
+gro: 'md_eq.gro'
+ndx: 'index.ndx'
+trr: 'md_eq.trr'
+parameterize_at_setup: False
+#radicals: ''
+mds:
+  equilibrate:
+    mdp: 'md_eq.mdp'
+  sample:
+    mdp: 'md_sample.mdp'
+  slow_growth:
+    mdp: 'slow_growth.mdp'
+changer:
+  coordinates:
+    md: 'slow_growth'
+    slow_growth: 'morse_only'
+  topology:
+    parameterization: 'grappa' 
+    parameterization_kwargs:
+      grappa_tag: 'grappa-1.4.1-radical'
+reactions:
+  hat_reaction:
+    model: 'grappa'
+    kmc: 'rfkmc'
+    h_cutoff: 3
+    polling_rate: 1
+    keep_structures: True
+    cap: False 
+    prediction_scheme: 'all_models'
+    n_unique: 100
+    trajectory_format: 'xtc'
+    change_coords: 'lambda'
+    arrhenius_equation:
+      frequency_factor: 6.25
+      temperature: 300
+sequence:
+- mult: 20
+  tasks:
+  - sample
+  - reactions
+  - equilibrate
