@@ -8,7 +8,7 @@ A list of KIMMDY setups, runs, analysis scripts and figures to go along with the
 - [Emulated reaction dynamics correctly predict radical reactions in small molecules]()
 - [KIMMDY yields novel reaction pathways for protein radicals]()
 - [KIMMDY can model competing reactions in biologically relevant systems](https://github.com/graeter-group/kimmdy-hydrolysis-examples)
-- [KIMMDY predicts quantum yields in DNA origami motifs](https://github.com/graeter-group/kimmdy-dimerization-examples)
+- [KIMMDY reveals unexpectedly low quantum yields in DNA origami motifs](https://github.com/graeter-group/kimmdy-dimerization-examples)
 
 Other assets:
 
