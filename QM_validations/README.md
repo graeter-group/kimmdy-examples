@@ -63,7 +63,7 @@ Rat tail tendom from [^4].
 * ./experiments/Zapp2020.dat:
 Rat tail tendom from [^5].
 
-# ./scripts_plots
+## ./scripts_plots
 
 * BDE_plot.py:
 Histogram of BDEs and highlights the values of PYD and DOPA, showing
@@ -75,17 +75,23 @@ comparison of EPR spectra with and without hyperfine corrections.
 * severalEPR_PYD_plotSI.py:
 Different EPR spectra of collagen fitted by DOPA and PYD
 
-[^1]Neese, F. Software update: The ORCA program system—version 5.0
+# References
+
+[^1]: Neese, F. Software update: The ORCA program system—version 5.0
 12, e1606. URL https://onlinelibrary.wiley.com/doi/abs/10.1002/wcms.1606.
 eprint: https://onlinelibrary.wiley.com/doi/pdf/10.1002/wcms.1606.
-[^2] Treyde, W., Riedmiller, K. & Greater, F., "Bond dissociation energies of
+
+[^2]: Treyde, W., Riedmiller, K. & Greater, F., "Bond dissociation energies of
 X–H bonds in proteins". RSC Advances 12, 34557–34564 (2022).
 URL https://xlink.rsc.org/?DOI=D2RA04002F.
-[^3] Stoll, S. & Schweiger, A. EasySpin, a comprehensive software package for
+
+[^3]: Stoll, S. & Schweiger, A. EasySpin, a comprehensive software package for
 spectral simulation and analysis in EPR 178, 42–55.
 URL https://www.sciencedirect.com/science/article/pii/S1090780705002892.
-[^4] Kurth, M. et al. "DOPA Residues Endow Collagen with Radical Scavenging
+
+[^4]: Kurth, M. et al. "DOPA Residues Endow Collagen with Radical Scavenging
 Capacity. Angewandte Chemie International Edition 62, e202216610 (2023).
 URL https://onlinelibrary.wiley.com/doi/abs/10.1002/anie.202216610
-[^5] Zapp, C. et al. Mechanoradicals in tensed tendon collagen as a source of
+
+[^5]: Zapp, C. et al. Mechanoradicals in tensed tendon collagen as a source of
 oxidative stress. Nature Communications 11, 2315 (2020).
