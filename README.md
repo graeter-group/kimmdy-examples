@@ -9,7 +9,7 @@ A list of KIMMDY setups, runs, analysis scripts and figures to go along with the
 - [KIMMDY yields novel reaction pathways for protein radicals](./collagen_HAT/)
 - [KIMMDY can model competing reactions in biologically relevant systems](https://github.com/graeter-group/kimmdy-hydrolysis-examples)
 - [KIMMDY reveals unexpectedly low quantum yields in DNA origami motifs](https://github.com/graeter-group/kimmdy-dimerization-examples)
-- [KIMMDY validation with QM and EPR experiments](./QM_validations/)
+- [Validation of KIMMDY predictions with QM and EPR experiments](./QM_validations/)
 
 Other assets:
 - [assets](./assets/)

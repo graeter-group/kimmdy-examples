@@ -1,7 +1,8 @@
-# KIMMDY Validation with QM and EPR Experiments
+# Validation of KIMMDY Predictions with QM and EPR Experiments
 
-Files for the QM calculations of the paper 'KIMMDY: a biomolecular reaction
-emulator'. All the calculations were run using ORCA 5.0 [^1].
+This part contains the files for the QM calculations and experimental data used
+for the paper 'KIMMDY: a biomolecular reaction emulator'. All the calculations
+were run using ORCA 5.0 [^1].
 
 **Note:** All the output (.out) files contain a section describing the input
 and the xyz structure.
