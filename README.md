@@ -1,3 +1,5 @@
+Moved to: https://github.com/graeter-group/kimmdy-examples-release
+
 # kimmdy-examples
 
 ![](./assets/kimmdy_logo.svg)
