@@ -1,9 +1,11 @@
+# %%
 import matplotlib.pyplot as plt
 from myutils.g_values.best_fit import TheoMatchExpe
 from myutils.plotters import StandardPlotter
-import kimmdy_paper_theme
+# import kimmdy_paper_theme
+import pandas as pd
 
-plot_colors = kimmdy_paper_theme.auto_init()
+# plot_colors = kimmdy_paper_theme.auto_init()
 
 ybottom = 0.16
 ytop = 0.92
@@ -17,8 +19,8 @@ files = ['../DOPA/radical/EPRspectrum.dat',
 
 tme = TheoMatchExpe(files,
                     experiment_file='../experiments/' +
-                                    'Kurth2023_G-band-Achilles.dat',
-                    fieldrange=fieldrange)
+                                    'Kurth2023_G-band-Achilles.dat')
+#%%
 
 fig, ax = plt.subplots(1,2)
 sp = StandardPlotter(fig=fig, ax=ax, set_default=False)
@@ -42,15 +44,24 @@ sp.ax[0].set_ylabel('Intensity [a.u]')
 sp.ax[0].set_title('With hyperfine corrections')
 sp.ax[0].legend()
 
+# %%
+dd_dict = {'experiment': tme.fieldexp/1000,
+           'Theoretical_spectrum': tme.intensfit,
+           'PYD': tme.coeffs[1] * tme.intensities[1],
+           'DOPA': tme.coeffs[0] * tme.intensities[0]}
+
+df = pd.DataFrame(dd_dict)
+df.to_csv('S6a_With_HFC.csv', index=False)
+# %%
+
 # Second
 # Without hyperfine interactions
 files = ['../DOPA/radical/EPRspectrum.dat',
          '../PYD/radical/EPRspectrum_NoHFC.dat']
 tme = TheoMatchExpe(files,
                     experiment_file='../experiments/' +
-                                    'Kurth2023_G-band-Achilles.dat',
-                    fieldrange=fieldrange)
-
+                                    'Kurth2023_G-band-Achilles.dat')
+# %%
 sp.plot_data(tme.fieldexp/1000, tme.intensexp, pstyle='-', color_plot='black',
              data_label='EPR spectrum', ax=1)
 sp.plot_data(tme.fieldexp/1000, tme.intensfit, pstyle='-', color_plot='gray',
@@ -73,3 +84,13 @@ sp.spaces[0].set_axis(ax, (1, 2), borders=[[xleft, ybottom], [xright, ytop]],
                       spaces=(0.07,0))
 
 # sp.save('PYD_in_collagenEPR-SI.png')
+
+# %%
+dd_dict = {'experiment': tme.fieldexp/1000,
+           'Theoretical_spectrum': tme.intensfit,
+           'PYD': tme.coeffs[1] * tme.intensities[1],
+           'DOPA': tme.coeffs[0] * tme.intensities[0]}
+
+df = pd.DataFrame(dd_dict)
+df.to_csv('S6b_NO_HFC.csv', index=False)
+# %%
